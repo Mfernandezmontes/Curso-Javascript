@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var imagenes = ["http://lorempixel.com/400/200/sports/", "http://lorempixel.com/400/200/sports/", "http://lorempixel.com/400/200/sports/"]
+
+        var x = 0;
+        function slider(){
+            if(x > imagenes.length){
+                x = 0;
+            }
+            
+            document.getElementById("imagen").src = imagenes[x];
+            x++;
+        }
+        
+        temporizador = setInterval(slider(),1000);
+        
+        
+        function stop(){
+            clearInterval(temporizador);
+        }
+        
+        function play(){
+            temporizador = setInterval(slider(),1000);
+        }
+    </script>
+</head>
+
+<body>
+    <img id="imagen">
+    <button type="button" onclick="stop()">stop</button>
+    <button type="button" onclick="play()">play</button>
+</body>
+
+</html>

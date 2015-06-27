@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <script>
+        window.onload = function(){
+            var btn_1 = document.getElementById("btn-1");
+            btn_1.onclick = function(){
+                var box_1 = document.getElementById("box-1");
+                box_1.innerHTML = "<h2>Has pulsado el boton</h2>"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn-1">Agregar contenido al div</button>
+    <div id="box-1"></div>
+</body>
+
+</html>
